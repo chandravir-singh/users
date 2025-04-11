@@ -11,6 +11,10 @@ require("dotenv").config();
 
 const app = express();
 
+app.use(express.json()); // This enables JSON body parsing
+app.use(express.urlencoded({ extended: true })); // Enables URL-encoded data parsing
+
+
 
 // // User Routes
 const userRoutes = require("./routes/userRoutes");
