@@ -11,6 +11,11 @@ require("dotenv").config();
 
 const app = express();
 
+
+// // User Routes
+const userRoutes = require("./routes/userRoutes");
+app.use("/users", userRoutes);
+
 // Middleware
 app.use(cors());
 app.use(express.json());
